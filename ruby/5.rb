@@ -4,20 +4,10 @@
 # What is the smallest positive number that is evenly divisible by all
 # of the numbers from 1 to 20?
 
-class Integer
-  
-  def factor_of? n
-    n % self == 0
-  end
-  
-end
-
 i = 40
 while true
   divisible = true
-  20.downto(11).each do |k|
-    divisible = false unless i % k == 0
-  end
+  20.downto(11).each { |k| divisible = false unless i % k == 0 }
   if divisible
     puts i
     break
