@@ -5,6 +5,8 @@
 class Integer
 
   def prime?
+    return false if self == 1
+    return true if self == 2
     (2..Math.sqrt(self).ceil).each do |i|
       return false if self % i == 0
     end
