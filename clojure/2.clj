@@ -14,7 +14,7 @@
 
 (defn sum
   [limit]
-  (reduce + (filter #(and (even? %))
+  (reduce + (filter #(even? %)
                     (take-while #(< % limit) fib-seq))))
 
 (println (sum 3999999))
